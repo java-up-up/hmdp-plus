@@ -268,7 +268,7 @@ public interface RedisCache {
      *
      * @param redisKeyBuild 缓存key
      * @param increment 步长
-     * @return
+     * @return 返回值
      */
     Long incrBy(RedisKeyBuild redisKeyBuild, long increment);
 
@@ -276,7 +276,7 @@ public interface RedisCache {
      * double类型增加(自增长), 负数则为自减
      * @param redisKeyBuild 缓存key
      * @param increment 步长
-     * @return
+     * @return 返回值
      */
     Double incrByDouble(RedisKeyBuild redisKeyBuild, double increment);
 
@@ -285,7 +285,7 @@ public interface RedisCache {
      *
      * @param redisKeyBuild 缓存key
      * @param value 值
-     * @return
+     * @return 返回值
      */
     Integer append(RedisKeyBuild redisKeyBuild, String value);
 

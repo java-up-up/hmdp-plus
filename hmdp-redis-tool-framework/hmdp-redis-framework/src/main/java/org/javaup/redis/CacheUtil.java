@@ -23,8 +23,7 @@ public class CacheUtil {
     /**
      * 构建类型
      *
-     * @param types
-     * @return
+     * @param types 类型
      */
     public static Type buildType(Type... types) {
         ParameterizedTypeImpl beforeType = null;
@@ -69,7 +68,7 @@ public class CacheUtil {
     /**
      * 检查 list 是否为空或空的字符串
      *
-     * @param list
+     * @param list 列表
      */
     public static void checkNotBlank(Collection<String> list) {
         for (String s : list) {
@@ -95,7 +94,7 @@ public class CacheUtil {
     /**
      * 检查 object 是否为空
      *
-     * @param object
+     * @param object 对象参数
      */
     public static void checkNotEmpty(Object object) {
         if (isEmpty(object)) {
@@ -128,7 +127,7 @@ public class CacheUtil {
         if (Objects.isNull(list)) {
             return new ArrayList<>();
         }
-        if (list.size() == 0 || Objects.isNull(list.get(0))) {
+        if (list.isEmpty() || Objects.isNull(list.get(0))) {
             return new ArrayList<>();
         }
         return list;
@@ -138,6 +137,6 @@ public class CacheUtil {
         if (Objects.isNull(list)) {
             return true;
         }
-        return list.size() == 0 || Objects.isNull(list.get(0));
+        return list.isEmpty() || Objects.isNull(list.get(0));
     }
 }

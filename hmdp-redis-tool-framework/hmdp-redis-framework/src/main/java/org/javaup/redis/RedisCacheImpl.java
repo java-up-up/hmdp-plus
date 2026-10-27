@@ -698,7 +698,7 @@ public class RedisCacheImpl implements RedisCache {
         String key = redisKeyBuild.getRelKey();
         List<String> jsonList = values.stream()
                 .map(value -> value instanceof String ? (String) value : JSON.toJSONString(value))
-                .collect(Collectors.toList());
+                .toList();
         return redisTemplate.opsForSet().remove(key, jsonList.toArray(new String[]{}));
     }
 
